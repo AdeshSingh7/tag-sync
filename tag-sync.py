@@ -29,6 +29,7 @@ def read_data():
                 except Exception:pass
 
 try:
+    os.system('clear')
     username = os.popen('users').read().strip()
     # print(username)
     read_data()
