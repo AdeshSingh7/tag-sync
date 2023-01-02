@@ -17,7 +17,7 @@ def sync_tag(project_id, tag_id):
 
 def read_data():
     project_id = args().project
-    with open("/home/"+username+"/Downloads/tags/"+project_id+".csv", "r") as csv_file:
+    with open("/home/"+username+"/Downloads/tags/"+project_id+".csv", "r", encoding="utf-8") as csv_file:
         data = csv.reader(csv_file)
         for lines in data:
             tag_id = lines[0]
