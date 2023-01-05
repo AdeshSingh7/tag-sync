@@ -31,7 +31,8 @@ def read_data():
 try:
     os.system('clear')
     username = os.popen('users').read().strip()
-    # print(username)
+    if not os.path.exists(f"/home/{username}/Downloads/tags/"):
+           os.makedirs(f"/home/{username}/Downloads/tags/")
     read_data()
 except KeyboardInterrupt:pass
 except Exception:pass
